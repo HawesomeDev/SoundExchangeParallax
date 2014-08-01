@@ -35,6 +35,7 @@ body{
 	display: block;
 	margin: 0 auto 40px;	
 	color: $color_primary;
+	height: 658px;
 
 }
 
@@ -120,7 +121,17 @@ body{
 	}
 }
 
+@media (max-width: 550px){
+	#main_wrapper{
+		height: 780px;
+	}
+}
+
 @media (min-width: 720px){
+	#main_wrapper{
+		height: 840px;
+	}
+
 	#panel_one_backing{
 		display: block;
 	}
@@ -185,7 +196,7 @@ body{
 
 #counter_holder{
 
-	width:710px;
+	max-width:710px;
 	margin: 0 auto 0px;
 	opacity: 0;
 
@@ -193,15 +204,16 @@ body{
 
 .number_plate{
 
-	width: 56px;
+	width: 56px / 710px * 100%;
 	height: 83px;
 	background-image:url(../../images/SoundExchange_Panel2_NumberPlate.png);
 	background-repeat: no-repeat;
 	float: left;
-	margin: 0 7px 0;
+	margin-left: 7px / 710px * 100%;
+	margin-right: 7px / 710px * 100%;
 	text-align: center;
 	padding-top: 20px;
-	font-size: 36px;
+	font-size: 24px;
 	font-family:$font_family_secondary;
 
 }
@@ -232,4 +244,22 @@ body{
 		padding-top:30px;
 	}
 
+}
+
+@media (min-width: 720px){
+	.number_plate{
+
+		width: 56px / 710px * 100%;
+		height: 83px;
+		background-image:url(../../images/SoundExchange_Panel2_NumberPlate.png);
+		background-repeat: no-repeat;
+		float: left;
+		margin-left: 7px / 710px * 100%;
+		margin-right: 7px / 710px * 100%;
+		text-align: center;
+		padding-top: 20px;
+		font-size: 36px;
+		font-family:$font_family_secondary;
+
+	}
 }

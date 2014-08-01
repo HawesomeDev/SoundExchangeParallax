@@ -44,7 +44,8 @@ body {
   max-width: 760px;
   display: block;
   margin: 0 auto 40px;
-  color: #333333; }
+  color: #333333;
+  height: 658px; }
 
 .bolded {
   font-family: "museo_sans500"; }
@@ -106,7 +107,13 @@ body {
     line-height: 20px;
     opacity: 0; }
 
+@media (max-width: 550px) {
+  #main_wrapper {
+    height: 780px; } }
 @media (min-width: 720px) {
+  #main_wrapper {
+    height: 840px; }
+
   #panel_one_backing {
     display: block; }
 
@@ -152,20 +159,21 @@ body {
     margin-top: 50px; }
 
 #counter_holder {
-  width: 710px;
+  max-width: 710px;
   margin: 0 auto 0px;
   opacity: 0; }
 
 .number_plate {
-  width: 56px;
+  width: 7.88732%;
   height: 83px;
   background-image: url(../../images/SoundExchange_Panel2_NumberPlate.png);
   background-repeat: no-repeat;
   float: left;
-  margin: 0 7px 0;
+  margin-left: 0.98592%;
+  margin-right: 0.98592%;
   text-align: center;
   padding-top: 20px;
-  font-size: 36px;
+  font-size: 24px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .num {
@@ -186,3 +194,17 @@ body {
     opacity: 0; }
   .count_elements:nth-child(n+2) {
     padding-top: 30px; }
+
+@media (min-width: 720px) {
+  .number_plate {
+    width: 7.88732%;
+    height: 83px;
+    background-image: url(../../images/SoundExchange_Panel2_NumberPlate.png);
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 0.98592%;
+    margin-right: 0.98592%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 36px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; } }
