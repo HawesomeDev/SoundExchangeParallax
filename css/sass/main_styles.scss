@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/****************************
+		SASS Code
+****************************/
+
+// fonts
+@import 'fonts';
+// defaults
+@import 'defaults';
+
+// Variables
+$color_primary : #333333;
+$font_family_secondary : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font_weight_small : 'museo_sans100';
+$font_weight_medium : 'museo_sans300';
+$font_weight_large : 'museo_sans500';
+$font_weight_xlarge : 'museo_sans900';
+
+/****************************
+		Main Styles
+****************************/
+
+body{
+
+	background-color: #f1f0f0;	
+	height: 5000px;
+
+}
+
+#main_wrapper{
+
+	max-width: 760px;
+	display: block;
+	margin: 0 auto 40px;	
+	color: $color_primary;
+
+}
+
+.bolded{
+
+	font-family: $font_weight_large;
+
+}
+/****************************
+		Panel One Styles
+****************************/
+#panel_one{
+
+	margin-top: 0px;
+
+	img{
+		padding: 350px 0 40px 0;
+		margin: 0 auto 0;
+		display:block;
+		opacity: 0;
+	}
+
+}
+
+#panel_one_backing{
+
+	background-image:url(../../images/SoundExchange_Panel1_MusicFunnel.png);
+	background-repeat:no-repeat;
+	background-position:right; 
+	height: 408px;
+	width:760px;
+	margin-top: 30px;
+	position: absolute;
+	z-index:0;
+	opacity: 0;
+	margin-right: -50px;
+	display: none;
+
+}
+
+#main_title{
+
+	max-width: 600px;
+	margin: 0 auto 0;	
+	text-align: center;
+
+	h1{
+		font-family:$font_weight_small;
+		font-size: 30px;
+		margin-top: -50px;
+		opacity: 0;
+	}
+
+	p{
+		font-family:$font_weight_xlarge;
+		font-size: 18px;
+		color: #63af61;
+		margin-top: -20px;
+		opacity: 0;
+	}
+}
+
+#body_text {
+
+	text-align: center;
+	padding-left: 50px / 760px * 100%;
+	padding-right: 50px / 760px * 100%;
+
+	h1{
+		font-family:$font_weight_large;
+		font-size: 30px;	
+		margin-top: 150px;
+		line-height: 36px;
+		opacity: 0;
+	}
+
+	p{
+		margin-top: 150px;
+		font-family:$font_weight_medium;
+		font-size: 16px;	
+		line-height: 20px;
+		opacity: 0;
+	}
+}
+
+@media (min-width: 720px){
+	#panel_one_backing{
+		display: block;
+	}
+
+	#main_wrapper{
+		margin: 0 auto 75px;	
+	}
+	#panel_one{
+		margin-top: 20px;
+	}
+	#main_title{
+
+		h1{
+			font-size: 65px;
+		}
+	}
+	#body_text {
+		h1{
+			font-size: 36px;
+			line-height: 40px;
+		}
+
+		p{
+			font-size: 20px;
+			line-height: 32px;	
+		}
+	}
+}
+
+/****************************
+		Panel Two Styles
+****************************/
+#panel_two{
+
+	background-image:url(../../images/carbon_fibre_big.png);	
+	opacity: 0;
+	margin-top: 150px;
+	color:#fff;
+	height: 450px;
+	font-family: $font_weight_small;
+
+	h1{
+		color:#68c25c;
+		text-align: center;
+		font-size: 36px;
+		padding: 60px 0 50px;
+		opacity: 0;
+		margin-top: 40px;
+	}
+
+	h2{
+		color:#fff;
+		text-align: center;
+		font-size: 28px;
+		line-height: 36px;
+		padding: 40px 0 50px 0;
+		opacity: 0;
+		margin-top: 50px;
+	}
+
+}
+
+#counter_holder{
+
+	width:710px;
+	margin: 0 auto 0px;
+	opacity: 0;
+
+}	
+
+.number_plate{
+
+	width: 56px;
+	height: 83px;
+	background-image:url(../../images/SoundExchange_Panel2_NumberPlate.png);
+	background-repeat: no-repeat;
+	float: left;
+	margin: 0 7px 0;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 36px;
+	font-family:$font_family_secondary;
+
+}
+
+.num{
+
+	display: block;
+	opacity: 0;
+
+}
+
+.count_elements{
+
+	float: left;	
+	font-size: 20px;
+	font-family:$font_family_secondary;
+	padding-top:20px;
+
+	&:first-child{
+		display:block;
+		width:15px;
+		padding-top:40px;
+		padding-right: 10px;
+		font-size: 40px;
+		opacity: 0;
+	}
+	&:nth-child(n+2){
+		padding-top:30px;
+	}
+
+}
