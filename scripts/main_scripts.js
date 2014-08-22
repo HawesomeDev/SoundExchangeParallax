@@ -5,13 +5,11 @@ $(document).ready(function(){
 	
 	var panelOneTL = new TimelineLite();
 	
-	panelOneTL.to($('#panel_one img'), 1.3, {
-		opacity: "1",
-		delay: 0.5
+	panelOneTL.to($('#panel_one img'), 1, {
+		opacity: "1"
 	})
 	.to($('#panel_one img'), 0.2, {
 		paddingTop: "375px",
-		delay: 1,
 		ease: Power1.easeOut
 	})
 	.to($('#panel_one img'), 0.5, {
